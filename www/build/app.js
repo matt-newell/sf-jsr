@@ -18,4 +18,4 @@
     x = document.createElement('script');
     x.src = window.customElements ? appCore : appCoreEs5;
     document.head.appendChild(x);
-})(window, document, "App","build/app/app.core.js","build/app/app.core.ce.js",[["DEMO-FETCH","demo-fetch",0,0,[["fetchError","fetchErrorHandler"],["fetchResolved","fetchResolvedHandler"]]],["ST-FETCH","demo-fetch",0,[["buttonLabel",1],["method",1],["url",1]]]]);
+})(window, document, "App","build/app/app.core.js","build/app/app.core.ce.js",[["DEMO-FETCH","demo-fetch",0,0,[["fetchError","fetchErrorHandler"],["fetchResolved","fetchResolvedHandler"]]],["ST-JSR","demo-fetch",0,[["args",1],["buffer",1],["buttonLabel",1],["escape",1],["method",1],["timeout",1]]]]);

@@ -6,29 +6,22 @@ import { Component, State, Listen } from '@stencil/core';
 })
 export class DemoFetch {
 
-    @State() method  : string = 'GET';
-    @State() url     : string = 'https://jsonplaceholder.typicode.com/posts';
-    @State() headers : object = {};
+    @State() method  : string = '{!$RemoteAction.MyCustomController.myFunction}';
 
     @Listen('fetchResolved')
     fetchResolvedHandler(data) {
-        console.log('Received from st-fetch: ', data);
+        console.log('Received from st-jsr: ', data);
     }
 
     @Listen('fetchError')
     fetchErrorHandler(data) {
-        console.log('Received from st-fetch: ', data);
+        console.log('Received from st-jsr: ', data);
     }
 
     render() {
         return (
             <div>
-                <st-fetch
-                method={this.method}
-                url={this.url}
-                headers={this.headers}
-                >
-                </st-fetch>
+                <st-jsr method={this.method}/>
             </div>
         );
     }

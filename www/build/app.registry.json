@@ -18,12 +18,24 @@
       ]
     ],
     [
-      "ST-FETCH",
+      "ST-JSR",
       "demo-fetch",
       0,
       [
         [
+          "args",
+          1
+        ],
+        [
+          "buffer",
+          1
+        ],
+        [
           "buttonLabel",
+          1
+        ],
+        [
+          "escape",
           1
         ],
         [
@@ -31,7 +43,7 @@
           1
         ],
         [
-          "url",
+          "timeout",
           1
         ]
       ]

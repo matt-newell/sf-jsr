@@ -14,7 +14,30 @@
 
 </head>
 <body>
-
+    <script>
+    var configSettings = {
+    	remoteActions: {
+    		myFunction :'{!$RemoteAction.MyCustomController.myFunction}',
+    		myOtherFunction :'{!$RemoteAction.MyCustomController.myOtherFunction}'
+    	},
+    	mocks :{
+    		'{!$RemoteAction.MyCustomController.myFunction}' : {
+    			timeout : 2000, //2 seconds with inline callback
+    			method : function(args){
+    				// console.log('args',args);
+    				return { yo:  args[1]}
+    			}
+    		},
+    		'{!$RemoteAction.MyCustomController.myOtherFunction}' : {
+    			timeout : 3000, //3 seconds with named callback function
+          method : function(args){
+    				// console.log('args',args);
+    				return { message:  args[1]}
+    			}
+    		}
+    	}
+    };
+    </script>
     <demo-fetch></demo-fetch>
 
 </body>
