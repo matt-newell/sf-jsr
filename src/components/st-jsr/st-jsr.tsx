@@ -69,7 +69,7 @@ export class StFetch {
     return jsr;
   }
 
-  doFetch () {
+  doJsr () {
     let options = {
       method: this.method,
       headers: this.headers,
@@ -100,7 +100,7 @@ export class StFetch {
   render() {
     return (
       <div>
-        <button onClick={() => this.doFetch()}>
+        <button onClick={() => this.doJsr()}>
           <span>{this.buttonLabel}</span>
         </button>
       </div>
